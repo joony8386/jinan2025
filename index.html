@@ -47,6 +47,9 @@
                 <button id="tab-btn-guide" class="tab-btn tab-inactive py-4 px-1 text-sm font-medium" onclick="showTab('guide')">
                     Jinan Guide
                 </button>
+                <button id="tab-btn-cv" class="tab-btn tab-inactive py-4 px-1 text-sm font-medium" onclick="showTab('cv')">
+                    Host CV
+                </button>
             </nav>
         </div>
 
@@ -226,13 +229,59 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Host CV Tab -->
+            <div id="tab-content-cv" class="tab-content space-y-6 hidden">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4 text-blue-600">Host: Dr. Tan Hongdong</h2>
+                    <p class="text-gray-700 mb-6 italic">"He, along with his team, will be receiving your visiting delegation."</p>
+
+                    <div class="space-y-5 text-gray-800 leading-relaxed">
+                        <p>
+                            <span class="font-semibold">Dr. Tan Hongdong</span> is a Chief Physician and core orthopedic specialist at the Shandong Public Clinical Health Center, with over 15 years of dedicated experience in spinal surgery.
+                        </p>
+                        <p>
+                            He is a renowned expert in minimally invasive spinal procedures, particularly specializing in spinal endoscopic surgery (including UBE, Unilateral Biportal Endoscopy, and percutaneous endoscopic lumbar discectomy) and the diagnosis and treatment of complex spinal conditions such as lumbar disc herniation, spinal stenosis, and degenerative spondylolisthesis.
+                        </p>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Research & Publications</h3>
+                            <p>
+                                Dr. Tan has long been committed to bridging clinical practice with academic innovation. He has led or participated in 3 provincial-level medical research projects focused on optimizing minimally invasive spinal techniques, and has published more than 10 peer-reviewed papers in core journals (including <span class="italic">Chinese Journal of Orthopaedics</span> and <span class="italic">Journal of Spinal Disorders & Techniques</span>).
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Affiliations & Contributions</h3>
+                            <p>
+                                He also serves as a committee member of the Minimally Invasive Spine Surgery Branch under the Shandong Medical Association, where he plays a key role in promoting the standardization and popularization of advanced spinal surgical methods across the province.
+                            </D>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Clinical Experience</h3>
+                            <p>
+                                With a patient-centered approach, Dr. Tan prioritizes personalized treatment plans and has successfully performed over 2,000 spinal surgeries, achieving excellent clinical outcomes and high patient satisfaction. He is also active in domestic and international academic exchanges—having participated in forums such as Eurospine and China Spine Congress—to share his clinical insights and learn from global peers, further enhancing his expertise in cutting-edge spinal care.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Mentorship</h3>
+                            <p>
+                                In addition to his clinical and research work, Dr. Tan is dedicated to medical education: he mentors young orthopedic surgeons and regularly conducts hands-on training sessions on spinal endoscopic techniques, contributing to the development of the next generation of spinal surgery professionals in Shandong.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script>
         // Simple tab switching logic
-        const contentIds = ['itinerary', 'travel', 'guide'];
-        const btnIds = ['itinerary', 'travel', 'guide'];
+        const contentIds = ['itinerary', 'travel', 'guide', 'cv'];
+        const btnIds = ['itinerary', 'travel', 'guide', 'cv'];
 
         function showTab(tabName) {
             // Hide all content
