@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinan Trip: Nov 16-19, 2025</title>
+    <!-- Importing Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importing Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom style for active tab */
+        .tab-active {
+            border-bottom: 2px solid #3b82f6; /* blue-500 */
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        /* Custom style for inactive tab */
+        .tab-inactive {
+            color: #6b7280; /* gray-500 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto max-w-5xl p-4 sm:p-6 lg:p-8">
+        <!-- Header -->
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-900">Jinan Travel Itinerary</h1>
+            <p class="text-xl text-gray-600">November 16 - 19, 2025</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="mb-6 border-b border-gray-200">
+            <nav class="flex -mb-px space-x-6">
+                <button id="tab-btn-itinerary" class="tab-btn tab-active py-4 px-1 text-sm font-medium" onclick="showTab('itinerary')">
+                    Full Itinerary
+                </button>
+                <button id="tab-btn-travel" class="tab-btn tab-inactive py-4 px-1 text-sm font-medium" onclick="showTab('travel')">
+                    Booking Details
+                </button>
+                <button id="tab-btn-guide" class="tab-btn tab-inactive py-4 px-1 text-sm font-medium" onclick="showTab('guide')">
+                    Jinan Guide
+                </button>
+            </nav>
+        </div>
+
+        <!-- Tab Content -->
+        <div>
+            <!-- Itinerary Tab -->
+            <div id="tab-content-itinerary" class="tab-content space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4 text-blue-600">Day-by-Day Schedule</h2>
+                    <ul class="space-y-6 border-l-2 border-blue-200 ml-2">
+                        <!-- Day 1: Nov 16 -->
+                        <li class="relative pl-6">
+                            <span class="absolute -left-[11px] top-1 w-5 h-5 bg-blue-500 rounded-full border-4 border-white"></span>
+                            <h3 class="font-semibold text-lg">Sunday, Nov 16: Arrival</h3>
+                            <p class="text-gray-600">Arrive in Jinan by high-speed train (1-2 hrs from Beijing/Tianjin).</p>
+                            <p class="text-sm text-gray-500 mt-1">Accommodation: Hilton Garden Inn Jinan</p>
+                        </li>
+                        <!-- Day 2: Nov 17 -->
+                        <li class="relative pl-6">
+                            <span class="absolute -left-[11px] top-1 w-5 h-5 bg-blue-500 rounded-full border-4 border-white"></span>
+                            <h3 class="font-semibold text-lg">Monday, Nov 17: Training</h3>
+                            <p class="text-gray-600"><span class="font-medium">Morning/Afternoon:</span> VBE Surgery Training at Shandong Provincial Public Clinical Health Center (with Prof. Tan).</p>
+                            <p class="text-gray-600"><span class="font-medium">Evening:</span> Dinner at local restaurant (TBD).</p>
+                            <p class="text-sm text-gray-500 mt-1">Accommodation: Hilton Garden Inn Jinan</p>
+                        </li>
+                        <!-- Day 3: Nov 18 -->
+                        <li class="relative pl-6">
+                            <span class="absolute -left-[11px] top-1 w-5 h-5 bg-blue-500 rounded-full border-4 border-white"></span>
+                            <h3 class="font-semibold text-lg">Tuesday, Nov 18: Visit & Sightseeing</h3>
+                            <p class="text-gray-600"><span class="font-medium">Morning/Afternoon:</span> Spine-related surgeries visit at Shandong Provincial Public Clinical Health Center.</p>
+                            <p class="text-gray-600"><span class="font-medium">Afternoon:</span> Jinan sightseeing (Daming Lake, Baotu Spring, Black Tiger Spring).</p>
+                            <p class="text-gray-600"><span class="font-medium">Evening:</span> Dinner at local restaurant (TBD).</p>
+                            <p class="text-sm text-gray-500 mt-1">Accommodation: Hilton Garden Inn Jinan</p>
+                        </li>
+                        <!-- Day 4: Nov 19 -->
+                        <li class="relative pl-6">
+                            <span class="absolute -left-[11px] top-1 w-5 h-5 bg-blue-500 rounded-full border-4 border-white"></span>
+                            <h3 class="font-semibold text-lg">Wednesday, Nov 19: Meeting & Departure</h3>
+                            <p class="text-gray-600"><span class="font-medium">Morning/Afternoon:</span> Dragon Crown Product exchange meeting.</p>
+                            <p class="text-gray-600"><span class="font-medium">Afternoon:</span> Travel to Beijing (PEK) for departure.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Travel Details Tab -->
+            <div id="tab-content-travel" class="tab-content space-y-6 hidden">
+                <!-- Hotel Confirmation -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4 text-blue-600">Hotel Reservation</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-medium">Hotel</p>
+                            <p>Hilton Garden Inn Jinan High-Tech Zone</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Address</p>
+                            <p>No. 358, Huizhan East Road, High-Tech Zone, Jinan</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Booking Name</p>
+                            <p>Sun Yaqian (Bella)</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Dates</p>
+                            <p>Nov 16 - Nov 19, 2025 (3 nights)</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Room Types</p>
+                            <ul class="list-disc list-inside">
+                                <li>1 King Bed Room with Breakfast</li>
+                                <li>1 Superior Twin Room with Breakfast</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-medium">Reservation Numbers</p>
+                            <ul class="list-disc list-inside">
+                                <li>3371038143</li>
+                                <li>3369533682</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-medium">Payment</p>
+                            <p>Dragon Crown Payment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flight Details -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4 text-blue-600">Flight Details (Booking: D6CWTM)</h2>
+                    <div class="space-y-4">
+                        <!-- Arrival Flight -->
+                        <div>
+                            <h3 class="text-lg font-medium">Arrival Flight: Sun, Nov 16</h3>
+                            <div class="mt-2 p-4 bg-gray-50 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
+                                <div>
+                                    <p class="font-semibold text-blue-700">Thai Airways TG614</p>
+                                    <p>Bangkok (BKK) &rarr; Beijing (PEK)</p>
+                                </div>
+                                <div>
+                                    <p>Departs: <span class="font-semibold">10:10</span></p>
+                                    <p>Arrives: <span class="font-semibold">15:50</span> (Terminal 3)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Departure Flight -->
+                        <div>
+                            <h3 class="text-lg font-medium">Departure Flight: Wed, Nov 19</h3>
+                            <div class="mt-2 p-4 bg-gray-50 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
+                                <div>
+                                    <p class="font-semibold text-blue-700">Thai Airways TG615</p>
+                                    <p>Beijing (PEK) &rarr; Bangkok (BKK)</p>
+                                </div>
+                                <div>
+                                    <p>Departs: <span class="font-semibold">17:05</span> (Terminal 3)</p>
+                                    <p>Arrives: <span class="font-semibold">21:20</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Passenger Details -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4 text-blue-600">Traveling Party</h2>
+                    <ul class="divide-y divide-gray-200">
+                        <li class="py-3 flex justify-between">
+                            <span>BYUN JOON YOUNG MR</span>
+                            <span class="text-gray-600">Ticket: ...5107</span>
+                        </li>
+                        <li class="py-3 flex justify-between">
+                            <span>TRATHITEPHUN WARAYOS MR</span>
+                            <span class="text-gray-600">Ticket: ...5108</span>
+                        </li>
+                        <li class="py-3 flex justify-between">
+                            <span>UDOMWONGSUB WISHUDA MS</span>
+                            <span class="text-gray-600">Ticket: ...5109</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Jinan Guide Tab -->
+            <div id="tab-content-guide" class="tab-content space-y-6 hidden">
+                <!-- Weather & Packing -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-semibold mb-4 text-blue-600">Jinan in Mid-November</h2>
+                        <p class="font-medium">Expected Weather</p>
+                        <p class="mb-4">It will be cold. Expect average high temperatures around <span class="font-semibold">13°C (55°F)</span> and lows dipping to <span class="font-semibold">1°C (34°F)</span>. It's generally dry and breezy, but be prepared for chilly weather, especially in the mornings and evenings.</p>
+                        
+                        <p class="font-medium">What to Pack</p>
+                        <ul class="list-disc list-inside space-y-1 mt-2">
+                            <li>A warm winter jacket or coat</li>
+                            <li>Layering clothes (sweaters, long-sleeved shirts)</li>
+                            <li>Thermal underwear, just in case</li>
+                            <li>Warm socks (wool blend is great)</li>
+                            <li>Gloves, scarf, and a beanie (hat)</li>
+                            <li>Comfortable walking shoes</li>
+                            <li>Formal/business attire for meetings</li>
+                            <li>Portable charger and a travel adapter</li>
+                        </ul>
+                    </div>
+                     <!-- Things to Do -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-semibold mb-4 text-blue-600">Things to Do in Jinan</h2>
+                        <p class="mb-4">Jinan is known as the "City of Springs." Here are a few highlights:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><span class="font-semibold">Baotu Spring Park:</span> (On your itinerary!) Famous for its gushing spring, considered one of China's best.</li>
+                            <li><span class="font-semibold">Daming Lake:</span> (On your itinerary!) A large, beautiful lake in the city center, great for a stroll or boat ride.</li>
+                            <li><span class="font-semibold">Black Tiger Spring (Heihuquan):</span> (On your itinerary!) Watch locals fill up jugs with fresh spring water.</li>
+                            <li><span class="font-semibold">Thousand Buddha Mountain (Qianfo Shan):</span> Offers great panoramic views of the city and features many Buddhist carvings.</li>
+                            <li><span class="font-semibold">Furong Street (Furongjie):</span> A bustling, narrow street perfect for trying local snacks and street food.</li>
+                            <li><span class="font-semibold">Shandong Museum:</span> A large, modern museum with impressive historical and cultural artifacts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple tab switching logic
+        const contentIds = ['itinerary', 'travel', 'guide'];
+        const btnIds = ['itinerary', 'travel', 'guide'];
+
+        function showTab(tabName) {
+            // Hide all content
+            contentIds.forEach(id => {
+                document.getElementById('tab-content-' + id).classList.add('hidden');
+            });
+            // Deactivate all buttons
+            btnIds.forEach(id => {
+                document.getElementById('tab-btn-' + id).classList.remove('tab-active');
+                document.getElementById('tab-btn-' + id).classList.add('tab-inactive');
+            });
+
+            // Show the selected content
+            document.getElementById('tab-content-' + tabName).classList.remove('hidden');
+            // Activate the selected button
+            document.getElementById('tab-btn-' + tabName).classList.add('tab-active');
+            document.getElementById('tab-btn-' + tabName).classList.remove('tab-inactive');
+        }
+    </script>
+
+</body>
+</html>
